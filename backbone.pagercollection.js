@@ -36,6 +36,8 @@
       response = returnedRes || response;
       
       this.state.totalCount = parseInt(this._count);
+      // initialize totalPages ( if fetch end )
+      this.state.totalPages = Math.ceil(this.state.totalCount / this.state.nbPerPage);
       
       // Let backbone handle the "real" collection
       return response.data;
@@ -43,7 +45,7 @@
 
 	// if want using pagination inside collection, we should inilialize pagination default object
 	initPagination: function(options){
-		this.state.totalCount = options.totalCount || this.checkInt(this._count);
+		this.state.totalCount = options.totalCount || pareInt(this._count);
 		this.state.nbPerPage = options.nbPerPage || 5;
 		this.state.totalPages = options.totalPages || Math.ceil(this.state.totalCount / this.state.nbPerPage);
 		this.state.currentPage = options.currentPage || 0;
@@ -100,7 +102,8 @@
 				this.state.currentPage = pageNum;
 			}
 		
-			options.data = {};
+			options = options || {};
+			options.data = options.data || {};
 			options.data.start = this.state.startPage;
 			options.data.limit = limit;
 
