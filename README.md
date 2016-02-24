@@ -18,6 +18,8 @@ parse : function(response){
 # How to way
 - 최초 collection.initPagination({...}) 을 수행한다.
 - initPagination 파라미터는 Obecjt type으로써 다음과 같은 propertie가 있다.
+  * nbPerPaage : 각 페이지당 showing할 아이템 갯수
+  * totalPages : 총 페이지 갯수
   * totalCount : collection의 총 model 갯수
   * currentPage : 현재 페이지
   * startPage : 시작 페이지
