@@ -40,3 +40,7 @@ collection.getPage(pageNum, options){};
   collection.hasNextPage();
   collection.hasPrevPage();
 ````
+- initPagination 을 통해 설정한 현재 collection의 페이지네이션 config확인 가능
+````
+  colleciton.state // object로 설정한 config 확인 가능
+````
