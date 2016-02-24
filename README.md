@@ -11,6 +11,7 @@ i can't write english
 parse : function(response){
   this._count = response._count; // _count 를 각자에 맞게 수정
   ............
+  return response.data; // 이것 또한 자신의 API가 주는 json 구조에 맞게 바꾸어 return 해준다.
 }
 ````
 
