@@ -1,5 +1,7 @@
 # Backbone.PagerCollection
-we using pagination inside backbone.collection extends
+- Bakcbone pagination 
+- We can using colleciton for pagination
+
 
 i can't write english
 
